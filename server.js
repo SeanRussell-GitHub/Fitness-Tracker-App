@@ -1,6 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+const Workout = require('./models/workout');
 
 const PORT = process.env.PORT || 3000;
 
@@ -14,10 +15,10 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness-tracker-app", { useNewUrlParser: true });
 
-app.post("/submit", ({body}, res) => {
-  User.create(body)
+app.post('/api/workouts', async (req, res) => {
+  Workout.create(req.body)
     .then(dbUser => {
       res.json(dbUser);
     })

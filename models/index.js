@@ -2,5 +2,6 @@
 
 module.exports = {
   Note: require("./Note"),
-  User: require("./userModel")
+  User: require("./userModel"),
+  Workout: require('./workout')
 };
