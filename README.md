@@ -12,9 +12,9 @@ A consumer will reach their fitness goals more quickly when they track their wor
 
 ## Acceptance Criteria
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+When the user loads the page, they are given the option to create a new workout or continue with their last workout.
 
-The user should be able to:
+The user is able to:
 
   * Add exercises to the most recent workout plan.
 
